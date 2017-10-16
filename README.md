@@ -1,2 +1,2 @@
 # tiny-facebook
-A tiny facebook built on Spring
+A tiny facebook built on Spring Boot.
