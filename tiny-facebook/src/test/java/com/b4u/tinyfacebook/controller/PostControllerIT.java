@@ -39,8 +39,8 @@ public class PostControllerIT {
 
     @Test
     public void getHello() throws Exception {
-        ResponseEntity<String> response = template.getForEntity(base.toString()+"post",
+        ResponseEntity<String> response = template.getForEntity(base.toString()+"post/123",
                 String.class);
-        assertThat(response.getBody(), equalTo("this is a post"));
+        assertThat(response.getStatusCode().is2xxSuccessful(), equalTo(true));
     }
 }
