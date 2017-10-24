@@ -12,7 +12,7 @@ import java.util.Date;
  * @Date: Created on 19:47 2017/10/16
  */
 @RestController
-@RequestMapping("/post")
+@RequestMapping("/v1/posts")
 public class PostController {
 
     /**
