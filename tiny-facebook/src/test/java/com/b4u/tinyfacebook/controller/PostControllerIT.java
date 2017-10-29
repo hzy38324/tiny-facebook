@@ -34,12 +34,12 @@ public class PostControllerIT {
 
     @Before
     public void setUp() throws Exception {
-        this.base = new URL("http://localhost:" + port + "/");
+        this.base = new URL("http://localhost:" + port + "/v1/");
     }
 
     @Test
     public void getHello() throws Exception {
-        ResponseEntity<String> response = template.getForEntity(base.toString()+"post/123",
+        ResponseEntity<String> response = template.getForEntity(base.toString()+"posts/123",
                 String.class);
         assertThat(response.getStatusCode().is2xxSuccessful(), equalTo(true));
     }

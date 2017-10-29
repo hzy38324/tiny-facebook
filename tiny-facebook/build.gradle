@@ -31,9 +31,7 @@ targetCompatibility = 1.8
 dependencies {
     // There's tomcat embedded in it
     compile("org.springframework.boot:spring-boot-starter-web")
-    // tag::actuator[]
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    // end::actuator[]
+
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

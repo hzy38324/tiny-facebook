@@ -29,7 +29,7 @@ public class PostControllerTest {
 
     @Test
     public void getPost() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/post/123").accept(MediaType.APPLICATION_JSON))
+        mvc.perform(MockMvcRequestBuilders.get("/v1/posts/123").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
 }
