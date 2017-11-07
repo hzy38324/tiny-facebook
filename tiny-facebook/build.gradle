@@ -32,6 +32,11 @@ dependencies {
     // There's tomcat embedded in it
     compile("org.springframework.boot:spring-boot-starter-web")
 
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+
+    compile("com.h2database:h2")
+
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

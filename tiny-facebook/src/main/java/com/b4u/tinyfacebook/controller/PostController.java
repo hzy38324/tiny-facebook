@@ -7,10 +7,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 
 /**
- * @Author: hzy
- * @Description: controller for post
- * @Date: Created on 19:47 2017/10/16
+ * Controller for post.
+ * This class has been deprecated since v3.0 because the appearance of PostRepository.
+ *
+ * @author hzy
+ * @since 1.0
  */
+@Deprecated
 @RestController
 @RequestMapping("/v1/posts")
 public class PostController {
@@ -21,7 +24,7 @@ public class PostController {
      * @return post
      */
     @RequestMapping(value="/{postId}", method= RequestMethod.GET)
-    public ResultBean<Post> getPost(@PathVariable String postId) {
+    public ResultBean<Post> getPost(@PathVariable long postId) {
         Post post = new Post();
         post.setId(postId);
         post.setUsername("Tom");

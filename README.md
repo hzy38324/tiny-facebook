@@ -15,9 +15,13 @@ You can go to the [Release Page](https://github.com/hzy38324/tiny-facebook/relea
 
 ## Run
 Before running the application, make sure you have JDK1.8+ and Gradle4.1+ in your environment.  
-Do this command to start the application:
+Do this command to install gradlew: 
 ```
-gradlew build && java -jar build/libs/tiny-facebook-0.1.0.jar
+gradle wrapper --gradle-version 2.13
+```
+And then do this command to start the application:
+```
+gradlew clean && gradlew build && java -jar build/libs/tiny-facebook-0.1.0.jar
 ```
 
 # Documentaion
