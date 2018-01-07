@@ -1,4 +1,4 @@
-package com.b4u.tinyfacebook.controller;
+package com.b4u.tinyfacebook.controller.post;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;

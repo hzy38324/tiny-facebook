@@ -1,7 +1,8 @@
-package com.b4u.tinyfacebook.controller;
+package com.b4u.tinyfacebook.controller.post;
 
 import com.b4u.tinyfacebook.entity.Post;
 import com.b4u.tinyfacebook.entity.ResultBean;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;

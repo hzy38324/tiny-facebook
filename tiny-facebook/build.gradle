@@ -38,8 +38,9 @@ dependencies {
     compile("com.h2database:h2")
 
     compile ('org.springframework.kafka:spring-kafka:2.1.0.RELEASE')
-    compile ('spring-boot-starter-aop')
+    compile ('org.springframework.boot:spring-boot-starter-aop')
 
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile 'org.slf4j:slf4j-api:1.7.5'
 }
