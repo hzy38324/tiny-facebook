@@ -20,16 +20,6 @@ public class Post {
     private String username;
     private Date createDate;
 
-    @Override
-    public String toString() {
-        return "Post{" +
-                "id='" + id + '\'' +
-                ", content='" + content + '\'' +
-                ", username='" + username + '\'' +
-                ", createDate=" + createDate +
-                '}';
-    }
-
     public long  getId() {
         return id;
     }
