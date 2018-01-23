@@ -1,13 +1,14 @@
 buildscript {
+    ext {
+        springBootVersion = '1.5.9.RELEASE'
+    }
     repositories {
-        // mavenCentral()
-        // use this res in China
         maven {
             url "http://maven.aliyun.com/nexus/content/groups/public/"
         }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.7.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
@@ -28,6 +29,12 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Edgware.RELEASE'
+    }
+}
+
 dependencies {
     // There's tomcat embedded in it
     compile("org.springframework.boot:spring-boot-starter-web")
@@ -40,7 +47,10 @@ dependencies {
     compile ('org.springframework.kafka:spring-kafka:2.1.0.RELEASE')
     compile ('org.springframework.boot:spring-boot-starter-aop')
 
+    compile ('org.slf4j:slf4j-api:1.7.5')
+
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    compile 'org.slf4j:slf4j-api:1.7.5'
 }
