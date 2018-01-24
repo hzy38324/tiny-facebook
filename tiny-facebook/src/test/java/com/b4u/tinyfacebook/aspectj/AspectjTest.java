@@ -1,5 +1,6 @@
 package com.b4u.tinyfacebook.aspectj;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import static org.junit.Assert.assertEquals;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AspectjConfig.class)
+@Ignore
 public class AspectjTest {
 
     private static final String MO_LI_HUA = "molihua";
